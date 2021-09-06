@@ -8,6 +8,7 @@ import {
   Logo,
   LogoText,
   Icon,
+  ButtonIcon,
   SearchInput
 } from "./styles/siteHeader";
 
@@ -42,6 +43,9 @@ SiteHeader.LogoText = function SiteHeaderLogoText({ children, ...restProps }) {
 
 SiteHeader.Icon = function SiteHeaderIcon({ ...restProps }) {
   return <Icon {...restProps} />;
+};
+SiteHeader.ButtonIcon = function SiteHeaderButtonIcon({ ...restProps }) {
+  return <ButtonIcon {...restProps} />;
 };
 
 SiteHeader.SearchInput = function SiteHeaderSearchInput({ ...restProps }) {

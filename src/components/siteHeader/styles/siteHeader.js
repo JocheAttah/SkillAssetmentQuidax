@@ -31,11 +31,11 @@ export const PaneRight = styled.div`
   max-width: 120px;
   justify-content: space-between;
   align-items: center;
-  margin-right: 30px;
+  margin: 0 30px;
+
 
   @media (min-width: 600px) {
-
-    max-width: 1300px;  
+    max-width: 1300px;
     width: 100%;
   }
 `;
@@ -47,16 +47,23 @@ export const LogoText = styled.h3`
   font-size: 14px;
 `;
 export const Icon = styled.img`
-  margin-right: 30px;
+//   margin-right: 30px;
   width: 20px;
   height: 20px;
+  align-self: center;
+`;
+
+export const ButtonIcon = styled.img`
+  width: 30px;
+  height: 30px;
 `;
 
 export const SearchInput = styled.input`
+  width: 100%;
   border: none;
   width: 100%;
   border: 1px solid #dddddd;
+  border-right-width:0;
   padding: 10px 15px;
-  flex: 1;
   
 `;

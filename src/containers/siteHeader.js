@@ -32,12 +32,12 @@ export function SiteHeaderContainer() {
               </div>
             </div>
           ) : (
-            <SiteHeader.Icon src={SearchIcon} alt="Search" />
+            <SiteHeader.ButtonIcon src={SearchIcon} alt="Search" />
           )}
-          <>
+          {/* <> */}
             <SiteHeader.Icon src={BlackBooksIcon} alt="Books" />
             <SiteHeader.Icon src={CartIcon} alt="Cart" />
-          </>
+          {/* </> */}
         </SiteHeader.PaneRight>
       </SiteHeader.Content>
     </SiteHeader.Container>
@@ -50,13 +50,16 @@ const styles = {
     style: 40,
     backgroundColor: "#F9F9FB",
     borderWidth: 1,
+    // borderLeftWidth: 0,
     borderStyle: "solid",
-    borderColor: "#F9F9FB",
+    borderColor: "#DDDDDD",
     display: "flex",
-    // justifyContent: "center",
-    // alignItems: "center",
+    justifyContent: "center",
+    alignItems: "center",
   },
   searchIconContainer: {
     display: "flex",
+    flex: 0.8,
+    alignSelf: "flex-start",
   },
 };
