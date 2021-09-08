@@ -8,6 +8,7 @@ import {
   SearchLarge,
 } from "../assets/";
 import useWindowWidth from "../hooks/useWindowSize";
+import { Link } from "react-router-dom";
 
 export function SiteHeaderContainer() {
   const { width } = useWindowWidth();
@@ -17,7 +18,12 @@ export function SiteHeaderContainer() {
       <SiteHeader.Content>
         <SiteHeader.PaneLeft>
           <SiteHeader.Logo src={LogoIcon} alt="QuidaxLogo" />
-          <SiteHeader.LogoText>Quidax Books</SiteHeader.LogoText>
+          <div style={styles.fixFlex}>
+            <SiteHeader.LogoText>Quidax Books</SiteHeader.LogoText>
+            <SiteHeader.LogoParagraph>
+              A flimsy book company
+            </SiteHeader.LogoParagraph>
+          </div>
         </SiteHeader.PaneLeft>
 
         <SiteHeader.PaneRight>
@@ -28,15 +34,19 @@ export function SiteHeaderContainer() {
                 placeholder="Search books, genres, authors, etc."
               />
               <div style={styles.searchButton}>
-                <SiteHeader.Icon src={SearchIcon} alt="Search" />
+                <Link>
+                  <SiteHeader.Icon src={SearchIcon} alt="Search" />
+                </Link>
               </div>
             </div>
           ) : (
-            <SiteHeader.ButtonIcon src={SearchIcon} alt="Search" />
+            <Link>
+              <SiteHeader.Icon src={SearchIcon} alt="Search" />
+            </Link>
           )}
           {/* <> */}
-            <SiteHeader.Icon src={BlackBooksIcon} alt="Books" />
-            <SiteHeader.Icon src={CartIcon} alt="Cart" />
+          <SiteHeader.Icon src={BlackBooksIcon} alt="Books" />
+          <SiteHeader.Icon src={CartIcon} alt="Cart" />
           {/* </> */}
         </SiteHeader.PaneRight>
       </SiteHeader.Content>
@@ -61,5 +71,10 @@ const styles = {
     display: "flex",
     flex: 0.8,
     alignSelf: "flex-start",
+  },
+
+  fixFlex: {
+    display: "flex",
+    flexDirection: "column",
   },
 };

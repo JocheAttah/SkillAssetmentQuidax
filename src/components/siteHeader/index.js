@@ -7,9 +7,10 @@ import {
   PaneRight,
   Logo,
   LogoText,
+  LogoParagraph,
   Icon,
   ButtonIcon,
-  SearchInput
+  SearchInput,
 } from "./styles/siteHeader";
 
 export default function SiteHeader({ children, ...restProps }) {
@@ -40,6 +41,12 @@ SiteHeader.Logo = function SiteHeaderLogo({ ...restProps }) {
 SiteHeader.LogoText = function SiteHeaderLogoText({ children, ...restProps }) {
   return <LogoText {...restProps}>{children}</LogoText>;
 };
+SiteHeader.LogoParagraph = function SiteHeaderLogoParagraph({
+  children,
+  ...restProps
+}) {
+  return <LogoParagraph {...restProps}>{children}</LogoParagraph>;
+};
 
 SiteHeader.Icon = function SiteHeaderIcon({ ...restProps }) {
   return <Icon {...restProps} />;
@@ -49,5 +56,8 @@ SiteHeader.ButtonIcon = function SiteHeaderButtonIcon({ ...restProps }) {
 };
 
 SiteHeader.SearchInput = function SiteHeaderSearchInput({ ...restProps }) {
-    return <SearchInput {...restProps} />;
-}
+  return <SearchInput {...restProps} />;
+};
+
+
+
